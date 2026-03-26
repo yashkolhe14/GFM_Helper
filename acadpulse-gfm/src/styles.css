@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg-page: #050508;
+  --color-bg-surface: #0a0a12;
+  --color-bg-elevated: #10101a;
+  
+  --color-accent-primary: #D4AF37;
+  --color-accent-glow: rgba(212, 175, 55, 0.3);
+  --color-accent-subtle: rgba(212, 175, 55, 0.15);
+  
+  --color-secondary-blue: #3B82F6;
+  --color-secondary-blue-glow: rgba(59, 130, 246, 0.25);
+  
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: rgba(255, 255, 255, 0.65);
+  --color-text-tertiary: rgba(255, 255, 255, 0.4);
+  
+  --color-border-default: rgba(255, 255, 255, 0.08);
+  --color-card-bg: rgba(255, 255, 255, 0.03);
+  --color-card-border: rgba(212, 175, 55, 0.15);
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-bg-surface/60 border border-border-default backdrop-blur-xl rounded-2xl;
+  }
+  .glass-card {
+    @apply bg-card-bg border border-card-border backdrop-blur-sm rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)];
+  }
+  .btn-primary {
+    @apply bg-accent-primary text-[#050508] font-semibold rounded-xl px-4 py-2 transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.35)] hover:bg-accent-primary/90 flex items-center justify-center gap-2;
+  }
+  .btn-secondary {
+    @apply bg-transparent border border-accent-subtle text-accent-primary font-medium rounded-xl px-4 py-2 transition-all duration-300 hover:bg-accent-primary/10 flex items-center justify-center gap-2;
+  }
+  .text-micro {
+    @apply text-[0.8rem] uppercase tracking-[0.05em] font-medium;
+  }
+  .status-pill {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-medium flex items-center gap-1.5 w-max;
+  }
+  .status-paid {
+    @apply bg-success/10 text-success border border-success/20;
+  }
+  .status-pending {
+    @apply bg-warning/10 text-warning border border-warning/20;
+  }
+  .status-missing {
+    @apply bg-danger/10 text-danger border border-danger/20;
+  }
+  .status-uploaded {
+    @apply bg-secondary-blue/10 text-secondary-blue border border-secondary-blue/20;
+  }
+  .status-parsed {
+    @apply bg-accent-primary/10 text-accent-primary border border-accent-primary/20;
+  }
+  .status-neutral {
+    @apply bg-white/5 text-text-secondary border border-white/10;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+}
