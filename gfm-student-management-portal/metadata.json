@@ -1,0 +1,5 @@
+{
+  "name": "GFM Student Management Portal",
+  "description": "A comprehensive, GFM-centric academic dashboard for managing student data, academic reporting, and mentor-mentee mappings from Excel/CSV uploads.",
+  "requestFramePermissions": []
+}
