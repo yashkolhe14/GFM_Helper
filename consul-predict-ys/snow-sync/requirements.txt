@@ -1,0 +1,6 @@
+requests
+fastapi==0.111.0
+uvicorn
+snowflake-connector-python==3.6.0
+azure-identity==1.19.0
+azure-keyvault-secrets==4.9.0

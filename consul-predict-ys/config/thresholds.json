@@ -1,0 +1,19 @@
+{
+  "_comment": "ConsulPredict risk thresholds (Task 11 - Vamsi). Edit here without code changes.",
+  "high": 80,
+  "medium": 50,
+  "low": 0,
+  "ai_adjustment_cap": 15,
+  "ai_confidence_threshold": 0.6,
+  "scoring_weights": {
+    "frequency": 0.5,
+    "spike": 0.3,
+    "criticality": 0.2
+  },
+  "spike_multiplier": 1.5,
+  "ai_trigger": {
+    "min_det_score": 50,
+    "on_spike": true,
+    "on_increasing_trend": true
+  }
+}
